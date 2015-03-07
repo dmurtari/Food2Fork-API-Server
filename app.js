@@ -30,6 +30,7 @@ app.get('/recipe/get/:recipe', function(req, res) {
   .send({"rId": req.params.recipe})
   .end(function (result) {
     console.log(result.status, result.headers, result.body);
+    res.send(result)
   });
 });
 
